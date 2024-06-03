@@ -7,8 +7,8 @@ export class User extends BaseEntity {
   @Column('varchar', { length: 80 })
   username: string;
 
-  @Column()
-  password: string;
+  @Column({ nullable: true })
+  password?: string | null;
 
   @Column('varchar', { length: 60 })
   firstName: string;
@@ -16,8 +16,8 @@ export class User extends BaseEntity {
   @Column('varchar', { length: 60 })
   lastName: string;
 
-  @Column('varchar', { length: 80, nullable: true })
-  email: string | null;
+  @Column('varchar', { length: 80 })
+  email: string;
 
   @Column({ nullable: true })
   avatar: string | null;
